@@ -57,7 +57,6 @@ std::string infx2pstfx(std::string inf) {
     }
     resString.erase(resString.end() - 1, resString.end());
     return resString;
-  return std::string("");
 }
 
 int eval(std::string pst) {
