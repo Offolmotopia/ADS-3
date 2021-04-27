@@ -98,9 +98,3 @@ int eval(std::string pst) {
     }
     return stack.top();
 }
-
-int main() {
-    std::cout << infx2pstfx("2*(3-6+4*(2-1))/6+3/2") << std::endl;
-    std::cout << eval(infx2pstfx("2*(3-6+4*(2-1))/6+3/2")) << std::endl;
-    return 0;
-}
