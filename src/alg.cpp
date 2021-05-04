@@ -3,7 +3,8 @@
 #include <map>
 #include <stack>
 std::string infx2pstfx(std::string inf) {
-    std::map<char, int> priorities = { {'(', 0}, {')', 1}, {'+', 2}, {'-', 2}, {'*', 3}, {'/', 3} };
+    std::map<char, int> priorities;
+    priorities = { {'(', 0}, {')', 1}, {'+', 2}, {'-', 2}, {'*', 3}, {'/', 3} };
     std::string resString, temp;
     std::stack<char> stack;
     for (auto& current : inf) {
@@ -75,22 +76,21 @@ int eval(std::string pst) {
             stack.pop();
             y = stack.top();
             stack.pop();
-            switch (pst[i])
-            {
-            case ('+'):
-                stack.push(y + x);
-                break;
-            case ('-'):
-                stack.push(y - x);
-                break;
-            case ('*'):
-                stack.push(y * x);
-                break;
-            case ('/'):
-                stack.push(y / x);
-                break;
-            default:
-                break;
+            switch (pst[i]) {
+                case ('+'):
+                    stack.push(y + x);
+                    break;
+                case ('-'):
+                    stack.push(y - x);
+                    break;
+                case ('*'):
+                    stack.push(y * x);
+                    break;
+                case ('/'):
+                    stack.push(y / x);
+                    break;
+                default:
+                    break;
             }
             i++;
         }
