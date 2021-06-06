@@ -50,7 +50,7 @@ std::string infx2pstfx(std::string inf) {
     if (temp.length()) {
         resString += temp;
         resString += ' ';
-   }
+    }
     for (unsigned int i = stack.size(); i > 0; i--) {
         resString += stack.top();
         resString += ' ';
